@@ -95,7 +95,7 @@ elif app_mode == 'Sign Language to Text (Numbers)':
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
     use_webcam = st.sidebar.button('Use Webcam')
-    record = False #st.sidebar.checkbox("Record Video")
+    record = st.sidebar.checkbox("Record Video")
     if record:
         st.checkbox("Recording", value=True)
 
@@ -311,7 +311,7 @@ elif app_mode == 'Sign Language to Text (Action)':
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
     use_webcam = st.sidebar.button('Use Webcam')
-    record = False #st.sidebar.checkbox("Record Video")
+    record = st.sidebar.checkbox("Record Video")
     if record:
         st.checkbox("Recording", value=True)
 
@@ -470,7 +470,7 @@ elif app_mode == 'Sign Language to Text(Alphabets)':
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
     use_webcam = st.sidebar.button('Use Webcam')
-    record = False #st.sidebar.checkbox("Record Video")
+    record = st.sidebar.checkbox("Record Video")
     if record:
         st.checkbox("Recording", value=True)
 
