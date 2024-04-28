@@ -6,4 +6,3 @@ mediapipe
 numpy
 Pillow
 SpeechRecognition
-download PyAudio
