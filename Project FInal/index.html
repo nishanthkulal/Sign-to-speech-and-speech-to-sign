@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand to Heart</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="txt">ISL Translator</h1>
+        <textarea id="input-text" name="input-text" placeholder="Enter text to translate" required></textarea>
+        <button onclick="translateText()">Translate</button>
+        <button onclick="startVoiceRecognition()" style="font-size: 15px;">🎙️</button>
+        <div id="output-images"></div>
+    </div>
+
+    <script>
+        function translateText() {
+            var inputText = document.getElementById("input-text").value;
+            var formData = new FormData();
+            formData.append("input_text", inputText);
+            
+            fetch('/translate', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                displayImages(data.output_gestures);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    
+        function displayImages(gestureImages) {
+            var outputImagesDiv = document.getElementById("output-images");
+            outputImagesDiv.innerHTML = "";
+            gestureImages.forEach(imagePath => {
+                var img = document.createElement('img');
+                img.src = imagePath;
+                outputImagesDiv.appendChild(img);
+            });
+        }
+
+        // Function to handle voice input
+        function startVoiceRecognition() {
+            var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                var result = event.results[0][0].transcript;
+                document.getElementById("input-text").value = result;
+            }
+
+            recognition.onend = function() {
+                recognition.stop();
+                translateText(); // Automatically translate text after voice input ends
+            }
+        }
+    </script>    
+    
+</body>
+</html>

@@ -1,0 +1,123 @@
+body{
+    background-image: url("/GestureImages/bg1.jpg");
+    background-size: cover;
+}
+/* Style for the container div */
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #8cb6e75a;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+/* Style for the input textarea */
+#input-text {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the translate button */
+button {
+    padding: 10px 20px;
+    background-color: #007bff50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the output images */
+#output-images {
+    margin-top: 20px;
+}
+
+/* Style for gesture images */
+img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.container .txt {
+    color: white;
+    font-size: 25pt;
+    font-weight: bold;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for screens smaller than 480px (e.g., mobile phones) */
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+
+    #input-text {
+        width: 98%; /* Full width for smaller screens */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+    }
+
+    img {
+        width: 60px; /* Adjust gesture image width for smaller screens */
+    }
+
+    .container .txt {
+        font-size: 16pt; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Styles for screens between 481px and 768px (e.g., tablets) */
+    .container {
+        width: 80%; /* Adjust container width for tablet screens */
+    }
+
+    #input-text {
+        width: 98%; /* Full width for tablet screens */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding for tablet screens */
+    }
+
+    img {
+        width: 80px; /* Adjust gesture image width for tablet screens */
+    }
+
+    .container .txt {
+        font-size: 18pt; /* Adjust font size for tablet screens */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    /* Styles for screens larger than 768px (e.g., desktops) */
+    .container {
+        width: 60%; /* Adjust container width for desktop screens */
+    }
+
+    #input-text {
+        width: 98%; /* Full width for desktop screens */
+    }
+
+    button {
+        padding: 10px 20px; /* Standard button padding for desktop screens */
+    }
+
+    img {
+        width: 100px; /* Standard gesture image width for desktop screens */
+    }
+
+    .container .txt {
+        font-size: 25pt; /* Standard font size for desktop screens */
+    }
+}
