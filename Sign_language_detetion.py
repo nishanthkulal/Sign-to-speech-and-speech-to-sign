@@ -19,10 +19,6 @@ DEMO_VIDEO = 'demo.mp4'
 DEMO_IMAGE = 'demo.jpg'
 
 my_list = []
-
-
-
-
 st.markdown(
     """
     <style>
@@ -277,7 +273,7 @@ elif app_mode == 'Sign Language to Text (Numbers)':
 
 #########################################################################################################################
 elif app_mode == 'Sign Language to Text (Action)':
-    st.title('Sign Language to Text(Numbers)')
+    st.title('Sign Language to Text(Action)')
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
     use_webcam = st.sidebar.button('Use Webcam')
